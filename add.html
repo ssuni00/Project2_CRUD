@@ -39,6 +39,17 @@
 
         return false;
       }
+
+      if (
+        frm.babgoName.value &&
+        frm.day.value != "" &&
+        frm.time.value != "" &&
+        frm.explain.value
+      ) {
+        alert("밥고가 추가되었습니다!");
+
+        return false;
+      }
     }
   </script>
 
