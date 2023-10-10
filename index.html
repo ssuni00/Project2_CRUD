@@ -22,24 +22,29 @@
         alert("취소되었습니다!");
       }
     }
-
-    babgoName = babgoName.value;
-    day = day.value;
-    time = time.value;
-    explanation = explanation.value;
-    location.href =
-      "index.html?" +
-      babgoName.value +
-      "," +
-      day.value +
-      "," +
-      time.value +
-      "," +
-      explanation.value;
   </script>
 
   <body>
     <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <div>
+            <strong onclick="location.href='index.html'">My BabGo List</strong>
+            <div onclick="location.href='index.html'" class="info">
+              22200809 황수현
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarHeader"
+          aria-controls="navbarHeader"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+      </div>
       <div class="container">
         <div
           class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
@@ -53,8 +58,6 @@
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
-            <h2 onclick="location.href='index.html'">MY Bab-Go List</h2>
-
             <li onclick="location.href='index.html'">
               <a href="#" class="nav-link px-2 text-white">LIST</a>
             </li>
@@ -89,14 +92,16 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td name="babgoName" value="새새밥고">
-                  <a onclick="location.href='view.html'">새새밥고</a>
+                <td name="babgoName" id="babgoName">
+                  <a
+                    onclick="{location.href='view.html', print('data1')}"
+                    id="data1"
+                    >새새밥고</a
+                  >
                 </td>
-                <td name="day" value="수요일">수요일</td>
-                <td name="time" value="3끝">3끝</td>
-                <td name="explanation" value="줄핀들 모여라!">
-                  줄핀들 모여라!
-                </td>
+                <td name="day" id="day">수요일</td>
+                <td name="time" id="time">3끝</td>
+                <td name="explanation" id="explanation">줄핀들 모여라!</td>
                 <td>
                   <button onclick="location.href='edit.html'">edit</button>
                   <button onclick="onclickDelete()">delete</button>

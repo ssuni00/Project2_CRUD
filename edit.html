@@ -40,6 +40,15 @@
         return false;
       }
     }
+
+    function onclickDelete() {
+      var result = confirm("정말로 삭제하시겠습니까?");
+      if (result) {
+        alert("삭제되었습니다!");
+      } else {
+        alert("취소되었습니다!");
+      }
+    }
   </script>
 
   <body>
@@ -57,7 +66,7 @@
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
-          <h2 onclick="location.href='index.html'">MY Bab-Go List</h2>
+            <h2 onclick="location.href='index.html'">MY Bab-Go List</h2>
 
             <li onclick="location.href='index.html'">
               <a href="#" class="nav-link px-2 text-white">LIST</a>
@@ -79,19 +88,20 @@
       <div>
         <h3>Add Your Bab-Go</h3>
         <div class="addLayout">
-        <form novalidate name="frm">
-          <div class="babgoName">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">밥고이름</label>
-              <input
-                type="text"
-                class="form-control"
-                id="firstName"
-                name="babgoName"
-              />
+          <form novalidate name="frm">
+            <div class="babgoName">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">밥고이름</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="babgoName"
+                  value="새새밥고"
+                />
+              </div>
             </div>
-          </div>
-          
+
             <div class="babgoName">
               <div class="col-md-4">
                 <label for="state" class="form-label">요일</label>
@@ -131,17 +141,24 @@
                 class="form-control"
                 id="firstName"
                 placeholder=""
-                value=""
+                value="줄핀들 모여라!"
                 required
                 name="explain"
               />
             </div>
-          </div>
 
-          <button type="submit" onclick="validationCheck()" class="addButton">
-            수정하기
-          </button>
-        </form>
+            <button
+              type="submit"
+              onclick="validationCheck()"
+              class="editButton"
+            >
+              수정하기
+            </button>
+            <button onclick="onclickDelete()" class="deleteButton">
+              delete
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   </body>

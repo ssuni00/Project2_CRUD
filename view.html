@@ -13,16 +13,6 @@
     <link rel="stylesheet" href="styles/my.css" />
   </head>
 
-  <script>
-    temp = location.href.split("?");
-    data = temp[1].split(",");
-    babgoName.value = data[0];
-    day = data[1];
-    time = data[2];
-    explaination = data[3];
-    // document.write(value1 + " " + valule2);
-  </script>
-
   <body>
     <header class="p-3 bg-dark text-white">
       <div class="container">
@@ -69,7 +59,8 @@
                   class="form-control"
                   id="firstName"
                   name="babgoName"
-                  disabled
+                  disabled="disabled"
+                  value="새새밥고"
                 />
               </div>
             </div>
@@ -82,7 +73,8 @@
                   class="form-control"
                   id="firstName"
                   name="day"
-                  disabled
+                  disabled="disabled"
+                  value="수요일"
                 />
               </div>
             </div>
@@ -95,7 +87,8 @@
                   class="form-control"
                   id="firstName"
                   name="time"
-                  disabled
+                  disabled="disabled"
+                  value="3끝"
                 />
               </div>
             </div>
@@ -107,20 +100,16 @@
                 class="form-control"
                 id="firstName"
                 placeholder=""
-                value=""
                 required
                 name="explain"
-                disabled
+                disabled="disabled"
+                value="줄핀들 모여라!"
               />
             </div>
 
-            <button
-              type="submit"
-              onclick="location.href='index.html'"
-              class="addButton"
-            >
+            <div onclick="location.href='index.html'" class="listButton">
               리스트로 돌아가기
-            </button>
+            </div>
           </form>
         </div>
       </div>

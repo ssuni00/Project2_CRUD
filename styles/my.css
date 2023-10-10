@@ -36,10 +36,45 @@ h3 {
 }
 .addButton {
   margin-top: 40px;
-  margin-left: 45vw;
+  margin-left: 13vw;
+}
+
+.listButton {
+  margin-top: 40px;
+  margin-left: 12vw;
+  width: 125px;
+
+  color: white;
+  background-color: rgb(73, 73, 73);
+  cursor: pointer;
+  text-align: center;
+}
+
+.editButton {
+  margin-top: 40px;
+  margin-left: 12vw;
+}
+
+.deleteButton {
+  color: white;
+  background-color: rgb(73, 73, 73);
+  cursor: pointer;
 }
 
 a,
 ul {
   cursor: pointer;
+}
+
+strong {
+  color: white;
+  font-size: 37px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.info {
+  color: white;
+  font-size: 23px;
+  margin-left: 5px;
 }
