@@ -38,3 +38,8 @@ h3 {
   margin-top: 40px;
   margin-left: 45vw;
 }
+
+a,
+ul {
+  cursor: pointer;
+}

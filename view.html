@@ -4,7 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/my.css" />
   </head>
+
+  <script>
+    temp = location.href.split("?");
+    data = temp[1].split(",");
+    babgoName.value = data[0];
+    day = data[1];
+    time = data[2];
+    explaination = data[3];
+    // document.write(value1 + " " + valule2);
+  </script>
+
   <body>
     <header class="p-3 bg-dark text-white">
       <div class="container">
@@ -20,7 +38,7 @@
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
-            <h2>MY Bab-Go List</h2>
+            <h2 onclick="location.href='index.html'">MY Bab-Go List</h2>
 
             <li onclick="location.href='index.html'">
               <a href="#" class="nav-link px-2 text-white">LIST</a>
@@ -38,6 +56,74 @@
         </div>
       </div>
     </header>
-    <main>View</main>
+    <main>
+      <div>
+        <h3>Add Your Bab-Go</h3>
+        <div class="addLayout">
+          <form novalidate name="frm">
+            <div class="babgoName">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">밥고이름</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="babgoName"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="babgoName">
+              <div class="col-md-4">
+                <label for="firstName" class="form-label">요일</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="day"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="babgoName">
+              <div class="col-md-4">
+                <label for="firstName" class="form-label">시간</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="time"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">밥고설명</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder=""
+                value=""
+                required
+                name="explain"
+                disabled
+              />
+            </div>
+
+            <button
+              type="submit"
+              onclick="location.href='index.html'"
+              class="addButton"
+            >
+              리스트로 돌아가기
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
