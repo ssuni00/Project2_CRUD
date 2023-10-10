@@ -76,9 +76,10 @@
       </div>
     </header>
     <main>
-      <div class="addLayout">
-        <h2>Add Your Bab-Go</h2>
-        <form class="needs-validation" novalidate name="frm">
+      <div>
+        <h3>Add Your Bab-Go</h3>
+        <div class="addLayout">
+        <form novalidate name="frm">
           <div class="babgoName">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">밥고이름</label>
@@ -88,59 +89,56 @@
                 id="firstName"
                 name="babgoName"
               />
-              <div class="invalid-feedback">Valid first name is required.</div>
+            </div>
+          </div>
+          
+            <div class="babgoName">
+              <div class="col-md-4">
+                <label for="state" class="form-label">요일</label>
+                <select class="form-select" id="state" name="day">
+                  <option value="">요일을 선택하세요</option>
+                  <option value="월요일">월요일</option>
+                  <option value="화요일">화요일</option>
+                  <option value="수요일">수요일</option>
+                  <option value="목요일">목요일</option>
+                  <option value="금요일">금요일</option>
+                  <option value="토요일">토요일</option>
+                  <option value="일요일">일요일</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="babgoName">
+              <div class="col-md-4">
+                <label for="state" class="form-label">시간</label>
+                <select class="form-select" id="state" name="time">
+                  <option value="">시간을 선택하세요</option>
+                  <option value="1끝">1끝</option>
+                  <option value="2끝">2끝</option>
+                  <option value="3끝">3끝</option>
+                  <option value="4끝">4끝</option>
+                  <option value="5끝">5끝</option>
+                  <option value="6끝">6끝</option>
+                  <option value="7끝">7끝</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">밥고설명</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder=""
+                value=""
+                required
+                name="explain"
+              />
             </div>
           </div>
 
-          <div class="babgoName">
-            <div class="col-md-4">
-              <label for="state" class="form-label">요일</label>
-              <select class="form-select" id="state" name="day">
-                <option value="">요일을 선택하세요</option>
-                <option value="월요일">월요일</option>
-                <option value="화요일">화요일</option>
-                <option value="수요일">수요일</option>
-                <option value="목요일">목요일</option>
-                <option value="금요일">금요일</option>
-                <option value="토요일">토요일</option>
-                <option value="일요일">일요일</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="babgoName">
-            <div class="col-md-4">
-              <label for="state" class="form-label">시간</label>
-              <select class="form-select" id="state" name="time">
-                <option value="">시간을 선택하세요</option>
-                <option value="1끝">1끝</option>
-                <option value="2끝">2끝</option>
-                <option value="3끝">3끝</option>
-                <option value="4끝">4끝</option>
-                <option value="5끝">5끝</option>
-                <option value="6끝">6끝</option>
-                <option value="7끝">7끝</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <label for="firstName" class="form-label">밥고설명</label>
-            <input
-              type="text"
-              class="form-control"
-              id="firstName"
-              placeholder=""
-              value=""
-              required
-              name="explain"
-            />
-            <div class="invalid-feedback">Valid first name is required.</div>
-          </div>
-
-          <hr class="my-4" />
-
-          <button type="submit" onclick="validationCheck()">
+          <button type="submit" onclick="validationCheck()" class="addButton">
             밥고 추가하기
           </button>
         </form>

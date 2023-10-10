@@ -26,5 +26,15 @@ button {
 }
 
 .addLayout {
-  align-items: center;
+  margin-left: 32vw;
+  margin-top: 5vh;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.addButton {
+  margin-top: 40px;
+  margin-left: 45vw;
 }
