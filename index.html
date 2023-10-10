@@ -4,6 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/my.css" />
   </head>
-  <body></body>
+
+  <script>
+    function onclickDelete() {
+      var result = confirm("정말로 삭제하시겠습니까?");
+      if (result) {
+        alert("삭제되었습니다");
+      } else {
+        alert("취소되었습니다");
+      }
+    }
+  </script>
+
+  <body>
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <use xlink:href="#bootstrap" />
+          </a>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <h2>MY Bab-Go List</h2>
+
+            <li onclick="location.href='index.html'">
+              <a href="#" class="nav-link px-2 text-white">LIST</a>
+            </li>
+            <li onclick="location.href='add.html'">
+              <a href="#" class="nav-link px-2 text-white">ADD</a>
+            </li>
+            <li onclick="location.href='edit.html'">
+              <a href="#" class="nav-link px-2 text-white">EDIT</a>
+            </li>
+            <li onclick="location.href='view.html'">
+              <a href="#" class="nav-link px-2 text-white">VIEW</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="title">Bab-Go List</div>
+      <div class="list">
+        <div class="table-responsive small">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">밥고이름</th>
+                <th scope="col">요일</th>
+                <th scope="col">시간</th>
+                <th scope="col">추가설명</th>
+                <th scope="col">수정/삭제</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>random</td>
+                <td>data</td>
+                <td>placeholder</td>
+                <td>illustrative</td>
+                <td>
+                  <button>edit</button>
+                  <button onclick="onclickDelete()">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>placeholder</td>
+                <td>irrelevant</td>
+                <td>visual</td>
+                <td>illustrative</td>
+                <td>
+                  <button>edit</button>
+                  <button>delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>data</td>
+                <td>rich</td>
+                <td>dashboard</td>
+                <td>illustrative</td>
+                <td>
+                  <button>edit</button>
+                  <button>delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>information</td>
+                <td>placeholder</td>
+                <td>illustrative</td>
+                <td>illustrative</td>
+                <td>
+                  <button>edit</button>
+                  <button>delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>text</td>
+                <td>random</td>
+                <td>layout</td>
+                <td>illustrative</td>
+                <td>
+                  <button>edit</button>
+                  <button>delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

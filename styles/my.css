@@ -1,0 +1,30 @@
+h2 {
+  margin-right: 700px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 25px;
+  color: rgb(73, 73, 73);
+  font-weight: bold;
+}
+
+.list {
+  padding: 25px;
+}
+
+button {
+  border-radius: 15px;
+  border-width: 1px;
+  border-color: rgb(73, 73, 73);
+  background-color: white;
+}
+
+.babgoName {
+  margin-bottom: 20px;
+}
+
+.addLayout {
+  align-items: center;
+}
